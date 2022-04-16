@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Name</label>
+    <input type="name" placeholder="enter your name" id="name">
+    <label for="">Address</label>
+    <input  id="address" type="text" placeholder="enter address">
+    <label for="">PIN number</label>
+    <input id="pin" type="number" placeholder="enter pin number">
+<label for="">Mobile number</label>
+    <input id="number" type="number" placeholder="enter mobile number">
+    <button id="btn" onclick="saveaddres()"> submit</button>
+</body>
+</html>
+<script>
+    function saveaddres(){
+        var name=document.getElementById("name").value
+        var address=document.getElementById("address").value
+        var pin=document.getElementById("pin").value
+        var number=document.getElementById("number").value
+      
+
+
+        let infoarr=localStorage.getItem("info")?JSON.parse(localStorage.getItem("info")):[];
+        var info={}
+        name.info=name
+        address.info=address
+        pin.info=pin
+        number.info=number
+        infoarr.push(info)
+    localStorage.setItem("info",JSON.stringify(arr))
+    }
+
+</script>
